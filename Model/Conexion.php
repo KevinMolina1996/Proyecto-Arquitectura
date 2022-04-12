@@ -14,7 +14,6 @@
 
         try 
         {
-            //echo "$this->driver:host=$this->host;dbname=$this->database;charset=$this->charset";
             $con = new PDO("$driver:host=$host;dbname=$database;charset=$charset",$user,$pass);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $con;

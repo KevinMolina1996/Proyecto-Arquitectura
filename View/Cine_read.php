@@ -1,18 +1,7 @@
-<?php
-
-// require "../model/Conexion.php";
-
-// $db = new Conexion();
-// $con = $db->conectar();
-
-// $sql = $con->query("SELECT id, Nombre, Descripcion, Valoracion, Imagen FROM peliculas");
-// $sql->execute();
-
-// $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-
-
-
+<?php 
+require "../Controller/CineController.php"; 
+$valor = null;
+$datos = CineController::controller_cine($valor);
 ?>
 
 
@@ -33,7 +22,6 @@
         <div class="row">
             <div class="col">
                 <h4>Peliculas</h4>
-                <a href="Cine_new.php" class="btn btn-primary float-right">Nuevo</a>
             </div>
         </div>
 
@@ -51,35 +39,31 @@
                             <th>Eliminar</th>
                         </tr>
                     </thead>
+
                     <!-- <tbody> -->
                         <?php
-
-                        require "../Controller/CineController.php";
-                        $valor = null;
-                        $datos = CineController::controller_cine($valor);
-
                         foreach($datos as $dato)
-                        {
+                        {                                  
                             echo
                             "<tr>
-                                <td>$dato[id]<td>
-                                <td>$dato[Nombre]<td>
-                                <td>$dato[Descripcion]<td>
-                                <td>$dato[Valoracion]<td>
-                                <td>$dato[Imagen]<td>
-                                <td>Editar<td>
-                                <td>Eliminar<td>
-                            </tr>
-                            ";
+                                <td>$dato[id]</td>
+                                <td>$dato[Nombre]</td>
+                                <td>$dato[Descripcion]</td>
+                                <td>$dato[Valoracion]</td>
+                                <td>$dato[Imagen]</td>
+                                <td><a class='btn btn-success' href='Cine_edit.php?idEdit=$dato[id]'>Edit</td>
+                                <td><a class='btn btn-danger' href='?idDelete=$dato[id]'>Delete</td>
+                            </tr>";
                         }
 
-
+                        $delete = new CineController();
+                        $delete->controller_delete_movie();
                         ?>
-
-
-
                     <!-- </tbody> -->
+
+
                 </table>
+                <a href="Cine_new.php" class="btn btn-primary float-right">Nuevo</a>
             </div>
         </div>
         
