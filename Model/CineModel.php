@@ -37,8 +37,8 @@ class cineModel
 
         if($stmt->execute())
         {
-			echo "Registrada";
-            
+			return "<script> alert('La Pelicula fue registrada en la aplicacion');
+            window.location.href = 'Cine_read.php';</script>";	
 		}
         else
         {
