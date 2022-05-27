@@ -37,19 +37,11 @@ require "../Controller/CineController.php";
                     <Input type="text" id="Descripcion" name="Descripcion" class="form-control" required>
                 </div>
 
-
-                <div class="row">
                 <div class="col-md-3">
-                    Calificacion
+                    <label for="Valoracion" class="form-label">Valoración</label>
+                    <Input type="range" min = "1" max= "10" id="Valoracion" name="Valoracion" class="form-control" required>
                 </div>
-                <div class="col-md-3">
-                    <select name="selector" class="form-label" id="1">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </div>
-                </div>
+                
 
                 <div class="row py-3">
                     <label for="Imagen" class="form-label">Imagen</label>
