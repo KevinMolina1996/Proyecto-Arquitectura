@@ -33,6 +33,7 @@ $datos = CineController::controller_cine($valor);
                             <th>#</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
+                            <th>Valoracion</th>
                             <th>Imagen</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
@@ -48,6 +49,7 @@ $datos = CineController::controller_cine($valor);
                                 <td>$dato[id]</td>
                                 <td>$dato[Nombre]</td>
                                 <td>$dato[Descripcion]</td>
+                                <td>$dato[Valoracion]</td>
                                 <td>$dato[Imagen]</td>
                                 <td><a class='btn btn-success' href='Cine_edit.php?idEdit=$dato[id]'>Edit</td>
                                 <td><a class='btn btn-danger' href='?idDelete=$dato[id]'>Delete</td>
