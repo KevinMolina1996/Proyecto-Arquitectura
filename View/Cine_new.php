@@ -49,7 +49,7 @@ require "../Controller/CineController.php";
                 </div>
 
                 <div class="col-md-12">
-                    <a href="Cine_read.php" class="btn btn-secondary">Regresar</a>
+                   
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
 
