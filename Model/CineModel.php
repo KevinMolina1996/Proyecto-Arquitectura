@@ -37,7 +37,14 @@ class cineModel
 
         if($stmt->execute())
         {
-			return "<script> alert('La Pelicula fue registrada en la aplicacion');
+			return "<script>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Registro Exitoso',
+                showConfirmButton: false,
+                timer: 1500
+              })
             window.location.href = 'Cine_read.php';</script>";	
 		}
         else
@@ -54,8 +61,15 @@ class cineModel
         $stmt -> bindParam(":id",$id, PDO::PARAM_STR);
         if($stmt->execute())
         {
-			return "<script> alert('Pelicula Eliminada');
-             window.location.href = 'Cine_read.php';</script>";	
+			return "<script> 
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Elememento eliminado',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            </script>";
 		}
         else
         {
@@ -78,8 +92,15 @@ class cineModel
 
         if($stmt->execute())
         {
-			return "<script> alert('Pelicula Actualizada');
-             window.location.href = 'Cine_read.php';</script>";	
+			return "<script>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Pelicula Actualizada',
+                showConfirmButton: false,
+                timer: 1500
+              })
+             </script>";
 		}
         else
         {
