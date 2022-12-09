@@ -1,10 +1,6 @@
 <?php
 
 require "../model/Conexion.php";
-
-// $db = new Conexion();
-// $db->conectar()
-
 ?>
 
 <!DOCTYPE html>
